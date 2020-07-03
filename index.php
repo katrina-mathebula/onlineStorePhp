@@ -233,7 +233,7 @@ $products = mysqli_fetch_all($result,MYSQLI_ASSOC);
         <!-- section title -->
         <div class="row">
         <div class="col-10 mx-auto col-sm-6 text-center">
-        <h1 class="text-capitalize">order <strong class="banner-title">Products</strong></h1>
+        <h1 class="text-capitalize">upcoming <strong class="banner-title">collection</strong></h1>
         </div>
         </div>
         
@@ -245,8 +245,8 @@ $products = mysqli_fetch_all($result,MYSQLI_ASSOC);
             <h3 class="py-3">Soap</h3>
                 <div class="text-muted">
                 <p class="my-1">Homemade soap</p>
-                <p class="my-1">natural ingredients 200g</p>
-                
+                <p class="my-1">natural ingredients 200g</p><br>
+                <img src="img/soaps1.jpg" class="img-fluid" alt="">
                     
                 </div>
             </div>
@@ -256,8 +256,8 @@ $products = mysqli_fetch_all($result,MYSQLI_ASSOC);
             <h3 class="py-3">Body Butter</h3>
                 <div class="text-muted">
                 <p class="my-1">variety of different body butter</p>
-                <p class="my-1">natural ingredients 250ml</p>
-                
+                <p class="my-1">natural ingredients 250ml</p><br>
+                <img src="img/bodybutter3.jpg" class="img-fluid" alt="">
                     
                 </div>
             </div>
@@ -267,8 +267,8 @@ $products = mysqli_fetch_all($result,MYSQLI_ASSOC);
             <h3 class="py-3">Room spray</h3>
                 <div class="text-muted">
                 <p class="my-1">room mist</p>
-                <p class="my-1">natural ingredients 250ml</p>
-                
+                <p class="my-1">natural ingredients 250ml</p><br>
+                <img src="img/roomspray1.jpg" class="img-fluid" alt="">
                     
                 </div>
             </div>
@@ -278,8 +278,8 @@ $products = mysqli_fetch_all($result,MYSQLI_ASSOC);
             <h3 class="py-3">Lotion</h3>
                 <div class="text-muted">
                 <p class="my-1">homemade lotion</p>
-                <p class="my-1">natural ingredients 250ml</p>
-                
+                <p class="my-1">natural ingredients 250ml</p><br>
+                <img src="img/lotion1.jpg" class="img-fluid" alt="">
                     
                 </div>
             </div>
