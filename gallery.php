@@ -185,7 +185,8 @@ $products = mysqli_fetch_all($result,MYSQLI_ASSOC);
     
         </header>
     
-  
+  <br>
+    <br>
     
 <!-- store section -->
     <section id="store" class="store py-5">
@@ -195,16 +196,6 @@ $products = mysqli_fetch_all($result,MYSQLI_ASSOC);
         <div class="col-10 mx-auto col-sm-6 text-center">
         <h1 class="text-capitalize">our <strong class="banner-title">store</strong></h1>
         </div>
-        </div>
-<!-- filter buttons -->
-        <div class="row">
-            <div class="col-lg-8 mx-auto d-flex justify-content-around sortBtn flex-wrap">
-                <a href="#store" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">all</a>
-                <a href="#store" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">fragrances</a>
-                <a href="#order" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">soaps</a>
-                <a href="#order" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">body butter</a>
-                <a href="#order" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">room spray</a>
-            </div>
         </div>
 
 <!-- store items -->
