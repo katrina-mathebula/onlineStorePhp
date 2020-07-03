@@ -39,6 +39,7 @@ body {
 /* nav links */
 .navbar-toggler{
     outline: none !important;
+    
 }
 .toggler-icon {
     font-size: 2.5rem;
@@ -52,6 +53,18 @@ body {
 .nav-link:hover{
     color: var(--mainBlack);
 }
+/* fixed navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--mainWhite);
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+
 .cart-info_icon{
     color: var(--mainBlack);
     cursor: pointer;
@@ -72,7 +85,7 @@ body {
     color: var (--mainWhite);
 }
 .max-height{
-    min-height: calc(100vh - 76px);
+    min-height: calc(100vh - 2px);
     background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.0)), url("../img/cactus.jpg");
     background-position: center;
     background-size: cover;
@@ -101,6 +114,9 @@ body {
 }
 
 /* about section */
+.abt{
+    text-align: center;
+}
 .about-img__container{
     position: relative;
 }
@@ -122,6 +138,7 @@ body {
 /* store */
 .store{
     background: var(--mainGrey);
+    z-index: -1;
 }
 .search-box{
     background: var(--mainPink);
@@ -140,6 +157,7 @@ body {
 }
 .store-img{
     transition: all 1s ease-in-out;
+    
 }
 .img-container:hover .store-img{
     transform: scale(1.2);
@@ -193,6 +211,7 @@ body {
     transition: all 0.3s ease-in-out;
     width: 0;
     overflow: hidden;
+    z-index: 1;
 }
 .show-cart {
     width: 18rem;
