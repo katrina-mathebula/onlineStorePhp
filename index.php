@@ -125,7 +125,7 @@ $products = mysqli_fetch_all($result,MYSQLI_ASSOC);
                    <h3 class="py-0" id="banner">Natural Cosmetics</h3>
                 </h1>     
                 
-                <a href="#store" class="btn banner-link text-uppercase my-2">explore</a>
+                <a href="#order" class="btn banner-link text-uppercase my-2">explore</a>
             </div>
     <!-- cart -->
             <div class="cart" id="cart">
@@ -175,46 +175,6 @@ $products = mysqli_fetch_all($result,MYSQLI_ASSOC);
             ?>
             
 <!-- end of cart item -->
-                <script
-                
-                  obj.clearCart = function() {
-                    cart = [];
-                    saveCart();
-                  }
-                       
-                    $('.clear-cart').click(function() {
-                      shoppingCart.clearCart();
-                      displayCart();
-                    });
-                        
-                        // Clear items
-$('.clear-cart').click(function() {
-  shoppingCart.clearCart();
-  displayCart();
-});
-
-
-function displayCart() {
-  var cartArray = shoppingCart.listCart();
-  var output = "";
-  for(var i in cartArray) {
-    output += "<tr>"
-      + "<td>" + cartArray[i].name + "</td>" 
-      + "<td>(" + cartArray[i].price + ")</td>"
-      + "<td><div class='input-group'><button class='minus-item input-group-addon btn btn-primary' data-name=" + cartArray[i].name + ">-</button>"
-      + "<input type='number' class='item-count form-control' data-name='" + cartArray[i].name + "' value='" + cartArray[i].count + "'>"
-      + "<button class='plus-item btn btn-primary input-group-addon' data-name=" + cartArray[i].name + ">+</button></div></td>"
-      + "<td><button class='delete-item btn btn-danger' data-name=" + cartArray[i].name + ">X</button></td>"
-      + " = " 
-      + "<td>" + cartArray[i].total + "</td>" 
-      +  "</tr>";
-  }
-  $('.show-cart').html(output);
-  $('.total-cart').html(shoppingCart.totalCart());
-  $('.total-count').html(shoppingCart.totalCount());
-}
-                        </script>
-
                 
                 
                 
@@ -238,90 +198,24 @@ function displayCart() {
         </header>
     
     <!-- about -->
-    <section class="about py-5" id="about">
+    <section class="about py-5" id="abt">
     <div class="container">
         <div class="row">
-        <div class="col-10 mx-auto col-md-6 my-5">
-            <h1 class="text-capitalize">about <strong class="banner-title">us</strong></h1>
-            <p class="my-4 text-muted w-90">
-            The story of Instinctive Natural Cosmetics dates back to 1997 - one born out of necessity. <br> <br>
+        <div class="col-10 mx-auto col-md-6 my-5 text-center">
+            <h1 class="text-capitalize ">Designed for Good </h1>
+            <p class="my-4 text-muted w-90 ">
+            As an ethical cosmetic brand, we consider every detail – from natural ingredients to locally sourced, recyclable or compostable packaging. Our virtues extend beyond the bottle, as our handcrafted products intend to allow gentler, more sensitive skin types to naturally react without discomfort.
 
 
-Celia Murray began formulating soaps and lotions out of instinct for her three children when she found retail products reacted adversely to their skin. <br> <br>
-
-This is what set Instinctive apart – products free from fragrances, preservatives and colorants, and rich in essential oils. <br> <br>
-
-The South African based mother has expanded her product range and reach over time – but what has remained central is the purity of ingredients allowing gentler, more sensitive skin types to naturally react without discomfort. 
             </p>
-            <a href="#" class="btn btn-black text-uppercase">explore</a>
+            <a href="about.html" class="btn btn-black text-uppercase">Learn more</a>
             </div>
-        <div class="col-10 mx-auto col-md-4 my-5 align-self-center">
-            <div class="about-img_container">
-            <img src="img/photo-1576561409251-f176dc6aee00.jpg" class="img-fluid" alt="">
-            </div>
-            </div>
+       
         </div>
         </div>
     </section>
     
-<!-- store section -->
-    <section id="store" class="store py-5">
-    <div class="container">
-<!-- section title -->
-        <div class="row">
-        <div class="col-10 mx-auto col-sm-6 text-center">
-        <h1 class="text-capitalize">our <strong class="banner-title">store</strong></h1>
-        </div>
-        </div>
-<!-- filter buttons -->
-        <div class="row">
-            <div class="col-lg-8 mx-auto d-flex justify-content-around sortBtn flex-wrap">
-                <a href="#store" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">all</a>
-                <a href="#store" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">fragrances</a>
-                <a href="#order" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">soaps</a>
-                <a href="#order" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">body butter</a>
-                <a href="#order" class="btn btn-black text-uppercase filter-btn m-2" data-filter="all">room spray</a>
-            </div>
-        </div>
 
-<!-- store items -->
-        <div class="row store-items" id="store-items">
-            
-  <?php foreach($products as $product):?>          
-<!-- single items -->
-        <div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 store-item sweets" data-item="sweets">
-            <div class="card ">
-            <div class="img-container">
-                <img src="<?php echo $product['img']?>" class="card-img-top store-img" alt="">
-                <div class="store-icons d-flex justify-content-around align-items-center">
-                <?php
-                    $pr =  $product['name'];
-                    $p_c =  $product['price'];
-                    $img =  $product['img']; 
-                    
-                ?>
-                <a href="#" class='store-item-icon' data-id="<?php echo $product['id']?>"><i class="fas fa-shopping-cart " onclick=" getProductName('<?php echo $pr; ?>', '<?php echo $p_c; ?>', '<?php echo $img; ?>');"></i></a>
-                </div>
-                </div>
-                <div class="card-body">
-                    <div class="card-text d-flex justify-content-between text-capitalize">
-                        
-                    <h5 id="store-item-name"><?php echo $product['name']?></h5>
-                        <h5 class="store-item-value">R <stong id="store-item-price" class="font-weight-bold"><?php echo $product['price']?></stong></h5>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-
-        
-   
-        
-<!-- end of store items -->
-    <?php endforeach;?>
-    
-        </div>
-    </section>
-<!--  end of store section  -->
     
 <!-- services -->
     <section id="services" class="services py-5">
